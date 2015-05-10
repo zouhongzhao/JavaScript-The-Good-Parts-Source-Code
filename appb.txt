@@ -1,0 +1,107 @@
+appendix: Bad Parts
+==================
+'' == '0'          // false
+0 == ''            // true
+0 == '0'           // true
+
+false == 'false'   // false
+false == '0'       // true
+
+false == undefined // false
+false == null      // false
+null == undefined  // true
+
+' \t\r\n ' == 0    // true
+    
+    
+====================================
+with (obj) {
+    a = b;
+}
+    
+    
+====================================
+if (obj.a === undefined) {
+    a = obj.b === undefined ? b : obj.b;
+} else {
+    obj.a = obj.b === undefined ? b : obj.b;
+}
+    
+    
+====================================
+a = b;
+a = obj.b;
+obj.a = b;
+obj.a = obj.b;
+    
+    
+====================================
+eval("myValue = myObject." + myKey + ";");
+    
+    
+====================================
+myvalue = myObject[myKey];
+    
+    
+====================================
+if (ok)
+    t = true;
+    
+    
+====================================
+if (ok)
+    t = true;
+    advance(  );
+    
+    
+====================================
+if (ok) {
+    t = true;
+    advance(  );
+}
+    
+    
+====================================
+if (ok) {
+    t = true;
+}
+advance(  );
+    
+    
+====================================
+for (p = src, q = dest; !*p; p++, q++) *q = *p;
+    
+    
+====================================
+&    and
+|    or
+^    xor
+˜    not
+>>   signed right shift
+>>>  unsigned right shift
+<<   left shift
+    
+    
+====================================
+function foo(  ) {}
+    
+    
+====================================
+var foo = function foo(  ) {};
+    
+    
+====================================
+(function (  ) {
+    var hidden_variable;
+
+    // This function can have some impact on
+    // the environment, but introduces no new
+    // global variables.
+}());
+    
+    
+====================================
+new Boolean(false)
+    
+    
+==================

@@ -1,0 +1,152 @@
+appendix: Awful Parts
+==================
+var foo = value;
+    
+    
+====================================
+window.foo = value;
+    
+    
+====================================
+foo = value;
+    
+    
+====================================
+return
+{
+    status: true
+};
+    
+    
+====================================
+return {
+    status: true
+};
+    
+    
+====================================
+abstract boolean break byte case catch char class const continue
+ debugger default delete do double else enum export extends false final
+ finally float for
+ function goto if implements import in instanceof int interface long native new null
+ package private protected public return short static super switch synchronized this
+ throw throws transient true try typeof var volatile void while with
+    
+    
+====================================
+var method;                // ok
+var class;                 // illegal
+object = {box: value};     // ok
+object = {case: value};    // illegal
+object = {'case': value};  // ok
+object.box = value;        // ok
+object.case = value;       // illegal
+object['case'] = value;    // ok
+    
+    
+====================================
+typeof 98.6
+    
+    
+====================================
+typeof null
+    
+    
+====================================
+my_value === null
+    
+    
+====================================
+if (my_value && typeof my_value === 'object') {
+    // my_value is an object or an array!
+}
+    
+    
+====================================
+typeof /a/
+    
+    
+====================================
+typeof NaN === 'number'    // true
+    
+    
+====================================
++ '0'       // 0
++ 'oops'    // NaN
+    
+    
+====================================
+NaN === NaN    // false
+NaN !== NaN    // true
+    
+    
+====================================
+isNaN(NaN)       // true
+isNaN(0)         // false
+isNaN('oops')    // true
+isNaN('0')       // false
+    
+    
+====================================
+var isNumber = function isNumber(value) {
+            return typeof value === 'number' && isFinite(value);
+};
+    
+    
+====================================
+if (Object.prototype.toString.apply(my_value) === '[object Array]'){
+   // my_value is truly an array!
+}
+    
+    
+====================================
+if (my_value && typeof my_value === 'object' &&
+        typeof my_value.length === 'number' &&
+        !(my_value.propertyIsEnumerable('length')) {
+    // my_value is truly an array!
+}
+    
+    
+====================================
+value = myObject[name];
+if (value == null) {
+   alert(name + ' not found.');
+}
+    
+    
+====================================
+var name;
+another_stooge.hasOwnProperty = null;       // trouble
+for (name in another_stooge) {
+    if (another_stooge.hasOwnProperty(name)) { // boom
+        document.writeln(name + ': ' + another_stooge[name]);
+    }
+}
+    
+    
+====================================
+var i;
+var word;
+var text =
+        "This oracle of comfort has so pleased me, " +
+        "That when I am in heaven I shall desire " +
+        "To see what this child does, " +
+        "and praise my Constructor.";
+
+var words = text.toLowerCase(  ).split(/[\s,.]+/);
+var count = {};
+for (i = 0; i < words.length; i += 1) {
+    word = words[i];
+    if (count[word]) {
+        count[word] += 1;
+    } else {
+        count[word] = 1;
+    }
+}
+    
+    
+====================================
+if (typeof count[word] === 'number') {
+    
+    
+==================
