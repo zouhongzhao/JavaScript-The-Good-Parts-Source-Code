@@ -1,6 +1,6 @@
 chapter: Methods
 ==================
-
+```javascript
 // Break a simple html text into tags and texts.
 // (See string.replace for the entityify method.)
 
@@ -90,4 +90,4 @@ RegExp.method('test', function (string) {
     return this.exec(string) !== null;
 });
     
-    
+```

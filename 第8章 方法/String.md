@@ -1,6 +1,6 @@
 chapter: Methods
 ==================
-
+```javascript
 var name = 'Curly';
 var initial = name.charAt(0);    // initial is 'C'
     
@@ -168,4 +168,4 @@ var a = String.fromCharCode(67, 97, 116);
 // a is 'Cat'
     
     
-==================
+```

@@ -1,6 +1,6 @@
 chapter: Methods
 ==================
-
+```javascript
 document.writeln(Math.PI.toExponential(0));
 document.writeln(Math.PI.toExponential(2));
 document.writeln(Math.PI.toExponential(7));
@@ -59,4 +59,4 @@ document.writeln(Math.PI.toString(  ));
 3.243f6a8885a3
 3.141592653589793
     
-    
+```

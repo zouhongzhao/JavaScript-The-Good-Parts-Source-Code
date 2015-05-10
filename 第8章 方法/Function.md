@@ -1,5 +1,5 @@
 chapter: Methods
-
+```javascript
 Function.method('bind', function (that) {
 
 // Return a function that will call this function as
@@ -19,4 +19,4 @@ var x = function (  ) {
 }.bind({value: 666});
 alert(x(  )); // 666
     
-    
+```
